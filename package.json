@@ -1,0 +1,20 @@
+{
+  "name": "notewk",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "deploy": "bash deploy.sh",
+    "github": "bash github.sh",
+    "dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:serve": "vitepress serve docs"
+  },
+  "keywords": [],
+  "author": "kevinwu_21",
+  "license": "ISC",
+  "dependencies": {
+    "vitepress": "^1.0.0-alpha.13",
+    "vue": "^3.2.38"
+  }
+}
