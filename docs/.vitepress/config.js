@@ -27,9 +27,16 @@ export default ({
       { text: '首页',link: '/' },
       { text: 'MacOS',
         items: [
-          { text: '软件应用 📚', link: '/mac/application/vscode' },
-          { text: '配置开发环境 📔', link: '/mac/dev/jdk' },
-          { text: '系统偏好设置 🛠', link: '/mac/preferences/general' },
+          { text: '📚 软件应用', link: '/mac/application/vscode' },
+          { text: '📔 配置开发环境', link: '/mac/dev/jdk' },
+          { text: '🛠 系统偏好设置', link: '/mac/preferences/general' },
+        ]
+      },
+      { text: 'Linux',
+        items: [
+          { text: '💿 安装指南', link: '/linux/install/centos' },
+          { text: '📕 配置开发环境', link: '/linux/dev/jdk' },
+          { text: '📊 Hadoop', link: '/linux/hadoop/environment' },
         ]
       },
     ],
@@ -79,6 +86,51 @@ export default ({
             {
               text:'通用',
               link: '/mac/preferences/general',
+            }
+          ]
+        }
+      ],
+      '/linux/':[
+        {
+          text: 'Linux 安装指南',
+          // 是否显示折叠按钮
+          collapsible: true,
+          // 默认是否折叠
+          collapsed: false,
+          items:[
+            {
+              text:'CentOS 7',
+              link: '/linux/install/centos',
+            },
+            {
+              text:'Ubuntu',
+              link: '/linux/install/ubuntu',
+            }
+          ]
+        },
+        {
+          text: 'Linux 开发环境',
+          // 是否显示折叠按钮
+          collapsible: true,
+          // 默认是否折叠
+          collapsed: false,
+          items:[
+            {
+              text:'JDK',
+              link: '/linux/dev/jdk',
+            }
+          ]
+        },
+        {
+          text: 'Hadoop 大数据',
+          // 是否显示折叠按钮
+          collapsible: true,
+          // 默认是否折叠
+          collapsed: false,
+          items:[
+            {
+              text:'环境搭建',
+              link: '/linux/hadoop/environment',
             }
           ]
         }

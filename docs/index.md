@@ -3,15 +3,15 @@ layout: home
 
 hero:
   name: noteWk
-  text: Just Step by Step ...
-  tagline: Frontend / JavaScript / Vue
+  text: developed by Kevin
+  tagline: MacOS / Linux / 前端 开发手册
   image:
     src: /undraw_Outer_space_g.png
     alt:
   actions:
     - theme: brand
       text: 进入博客
-      link: /frontend/
+      link: /linux/hadoop/environment
     - theme: alt
       text: Gitee主页
       link: https://gitee.com/kevinwu_21
