@@ -10,8 +10,8 @@ hero:
     alt:
   actions:
     - theme: brand
-      text: 进入博客
-      link: /linux/hadoop/environment
+      text: 进入文档
+      link: /linux/install/centos
     - theme: alt
       text: Gitee主页
       link: https://gitee.com/kevinwu_21
