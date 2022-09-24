@@ -1,7 +1,7 @@
 # CentOS 7 安装指南
 > 本文将演示在 VMware 上快速安装 CentOS 虚拟机
 
-![CentOS](./img/centoslogo.png)
+![CentOS](https://notewk-1304925042.cos.ap-guangzhou.myqcloud.com/notewk/centoslogo.png)
 ## 下载 CentOS 镜像
 >我们安装CentOS-7-x86_64-Minimal-1810.iso，也就是精简版，选择这个版本的原因在于精简版消耗系统资源最少，也相对来说更加稳定。下面是各个版本的阿里云镜像下载地址:
 
@@ -12,7 +12,7 @@ DVD版 | http://mirrors.aliyun.com/centos/7.9.2009/isos/x86_64/CentOS-7-x86_64-D
 完全版Everything | http://mirrors.aliyun.com/centos/7.9.2009/isos/x86_64/CentOS-7-x86_64-Everything-2009.iso
 
 ## 创建CentOS虚拟机
->开始,点下一步
+>开始,点击下一步
 
 ![centos1](https://notewk-1304925042.cos.ap-guangzhou.myqcloud.com/notewk/centos1.jpg)
 
@@ -90,7 +90,7 @@ DVD版 | http://mirrors.aliyun.com/centos/7.9.2009/isos/x86_64/CentOS-7-x86_64-D
 ![centos](https://notewk-1304925042.cos.ap-guangzhou.myqcloud.com/notewk/centos35.jpg)
 
 ## 使用 Xshell 连接虚拟机
->如果使用 MacOS 可以选择
+>如果使用 MacOS 可以选择使用
 [Royal TSX](https://royalapps.com/ts/mac/features)
 
 ### 新建连接
