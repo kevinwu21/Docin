@@ -14,19 +14,19 @@ DVD版 | http://mirrors.aliyun.com/centos/7.9.2009/isos/x86_64/CentOS-7-x86_64-D
 ## 创建CentOS虚拟机
 >开始,点下一步
 
-![centos1](img/centos1.jpg)
+![centos1](https://notewk-1304925042.cos.ap-guangzhou.myqcloud.com/notewk/centos1.jpg)
 
 >下一步
 
-![centos2](img/centos2.jpg)
+![centos2](https://notewk-1304925042.cos.ap-guangzhou.myqcloud.com/notewk/centos2.jpg)
 
 >选择刚刚下载的iso镜像文件，下一步
 
-![centos3](img/centos3.jpg)
+![centos3](https://notewk-1304925042.cos.ap-guangzhou.myqcloud.com/notewk/centos3.jpg)
 
 >自定义虚拟机名称，更改虚拟机安装位置，下一步
 
-![centos4](img/centos4.jpg)
+![centos4](https://notewk-1304925042.cos.ap-guangzhou.myqcloud.com/notewk/centos4.jpg)
 :::warning 注意
 虚拟机存放的目录不能有中文
 :::
@@ -34,79 +34,79 @@ DVD版 | http://mirrors.aliyun.com/centos/7.9.2009/isos/x86_64/CentOS-7-x86_64-D
 
 >对虚拟机的配置进行分配
 
-![centos5](img/centos5.jpg)
-![centos6](img/centos6.jpg)
-![centos7](img/centos7.jpg)
-![centos8](img/centos8.jpg)
-![centos9](img/centos9.jpg)
-![centos10](img/centos10.jpg)
-![centos11](img/centos11.jpg)
-![centos12](img/centos12.jpg)
-![centos13](img/centos13.jpg)
+![centos5](https://notewk-1304925042.cos.ap-guangzhou.myqcloud.com/notewk/centos5.jpg)
+![centos6](https://notewk-1304925042.cos.ap-guangzhou.myqcloud.com/notewk/centos6.jpg)
+![centos7](https://notewk-1304925042.cos.ap-guangzhou.myqcloud.com/notewk/centos7.jpg)
+![centos8](https://notewk-1304925042.cos.ap-guangzhou.myqcloud.com/notewk/centos8.jpg)
+![centos9](https://notewk-1304925042.cos.ap-guangzhou.myqcloud.com/notewk/centos9.jpg)
+![centos10](https://notewk-1304925042.cos.ap-guangzhou.myqcloud.com/notewk/centos10.jpg)
+![centos11](https://notewk-1304925042.cos.ap-guangzhou.myqcloud.com/notewk/centos11.jpg)
+![centos12](https://notewk-1304925042.cos.ap-guangzhou.myqcloud.com/notewk/centos12.jpg)
+![centos13](https://notewk-1304925042.cos.ap-guangzhou.myqcloud.com/notewk/centos13.jpg)
 
 ## CentOS安装
-![centos](img/centos14.jpg)
+![centos](https://notewk-1304925042.cos.ap-guangzhou.myqcloud.com/notewk/centos14.jpg)
 
-![centos](img/centos15.jpg)
+![centos](https://notewk-1304925042.cos.ap-guangzhou.myqcloud.com/notewk/centos15.jpg)
 
-![centos](img/centos16.jpg)
+![centos](https://notewk-1304925042.cos.ap-guangzhou.myqcloud.com/notewk/centos16.jpg)
 
-![centos](img/centos17.jpg)
+![centos](https://notewk-1304925042.cos.ap-guangzhou.myqcloud.com/notewk/centos17.jpg)
 
-![centos](img/centos18.jpg)
+![centos](https://notewk-1304925042.cos.ap-guangzhou.myqcloud.com/notewk/centos18.jpg)
 
-![centos](img/centos19.jpg)
+![centos](https://notewk-1304925042.cos.ap-guangzhou.myqcloud.com/notewk/centos19.jpg)
 
-![centos](img/centos20.jpg)
+![centos](https://notewk-1304925042.cos.ap-guangzhou.myqcloud.com/notewk/centos20.jpg)
 
-![centos](img/centos21.jpg)
+![centos](https://notewk-1304925042.cos.ap-guangzhou.myqcloud.com/notewk/centos21.jpg)
 
-![centos](img/centos22.jpg)
+![centos](https://notewk-1304925042.cos.ap-guangzhou.myqcloud.com/notewk/centos22.jpg)
 
-![centos](img/centos23.jpg)
+![centos](https://notewk-1304925042.cos.ap-guangzhou.myqcloud.com/notewk/centos23.jpg)
 
-![centos](img/centos24.jpg)
+![centos](https://notewk-1304925042.cos.ap-guangzhou.myqcloud.com/notewk/centos24.jpg)
 
-![centos](img/centos25.jpg)
+![centos](https://notewk-1304925042.cos.ap-guangzhou.myqcloud.com/notewk/centos25.jpg)
 
-![centos](img/centos26.jpg)
+![centos](https://notewk-1304925042.cos.ap-guangzhou.myqcloud.com/notewk/centos26.jpg)
 
-![centos](img/centos27.jpg)
+![centos](https://notewk-1304925042.cos.ap-guangzhou.myqcloud.com/notewk/centos27.jpg)
 
-![centos](img/centos28.jpg)
+![centos](https://notewk-1304925042.cos.ap-guangzhou.myqcloud.com/notewk/centos28.jpg)
 
-![centos](img/centos29.jpg)
+![centos](https://notewk-1304925042.cos.ap-guangzhou.myqcloud.com/notewk/centos29.jpg)
 
-![centos](img/centos30.jpg)
+![centos](https://notewk-1304925042.cos.ap-guangzhou.myqcloud.com/notewk/centos30.jpg)
 
-![centos](img/centos31.jpg)
+![centos](https://notewk-1304925042.cos.ap-guangzhou.myqcloud.com/notewk/centos31.jpg)
 
-![centos](img/centos32.jpg)
+![centos](https://notewk-1304925042.cos.ap-guangzhou.myqcloud.com/notewk/centos32.jpg)
 
-![centos](img/centos33.jpg)
+![centos](https://notewk-1304925042.cos.ap-guangzhou.myqcloud.com/notewk/centos33.jpg)
 
-![centos](img/centos34.jpg)
+![centos](https://notewk-1304925042.cos.ap-guangzhou.myqcloud.com/notewk/centos34.jpg)
 
-![centos](img/centos35.jpg)
+![centos](https://notewk-1304925042.cos.ap-guangzhou.myqcloud.com/notewk/centos35.jpg)
 
 ## 使用 Xshell 连接虚拟机
 >如果使用 MacOS 可以选择
 [Royal TSX](https://royalapps.com/ts/mac/features)
 
 ### 新建连接
-![xshell](img/xshell1.jpg)
+![xshell](https://notewk-1304925042.cos.ap-guangzhou.myqcloud.com/notewk/xshell1.jpg)
 ### 输入用户名
-![xshell](img/xshell2.jpg)
+![xshell](https://notewk-1304925042.cos.ap-guangzhou.myqcloud.com/notewk/xshell2.jpg)
 ### 输入密码
-![xshell](img/xshell3.jpg)
+![xshell](https://notewk-1304925042.cos.ap-guangzhou.myqcloud.com/notewk/xshell3.jpg)
 ### 登录Linux系统
-![xshell](img/xshell4.jpg)
+![xshell](https://notewk-1304925042.cos.ap-guangzhou.myqcloud.com/notewk/xshell4.jpg)
 
 ## 使用 Xftp 实现文件传输
 ### 在 Xshell 中打开 Xftp
-![xftp](img/xftp1.jpg)
+![xftp](https://notewk-1304925042.cos.ap-guangzhou.myqcloud.com/notewk/xftp1.jpg)
 ### 把 Windows 文件上传到 Linux
-![xftp](img/xftp2.jpg)
+![xftp](https://notewk-1304925042.cos.ap-guangzhou.myqcloud.com/notewk/xftp2.jpg)
 
 :::tip 结束
 :tada: :100: 恭喜你，CentOS 现已安装成功 :tada: :100:
