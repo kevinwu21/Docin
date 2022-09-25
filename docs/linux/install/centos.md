@@ -109,5 +109,5 @@ DVD版 | http://mirrors.aliyun.com/centos/7.9.2009/isos/x86_64/CentOS-7-x86_64-D
 ![xftp](https://notewk-1304925042.cos.ap-guangzhou.myqcloud.com/notewk/xftp2.jpg)
 
 :::tip 结束
-:tada: :100: 恭喜你，CentOS 现已安装成功 :tada: :100:
+:tada: :100: 恭喜你，CentOS 现已安装成功
 :::
