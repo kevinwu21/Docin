@@ -36,7 +36,7 @@ export default ({
         items: [
           { text: '💿 安装指南', link: '/linux/install/centos' },
           { text: '📕 配置开发环境', link: '/linux/dev/jdk' },
-          { text: '📊 Hadoop', link: '/linux/hadoop/environment' },
+          { text: '📊 Hadoop', link: '/linux/hadoop/1basic' },
         ]
       },
     ],
@@ -129,9 +129,21 @@ export default ({
           collapsed: false,
           items:[
             {
-              text:'环境搭建',
-              link: '/linux/hadoop/environment',
-            }
+              text:'基本环境搭建',
+              link: '/linux/hadoop/1basic'
+            },
+            {
+              text:'伪分布式',
+              link: '/linux/hadoop/2pseudoDistribution'
+            },
+            {
+              text:'1.x 完全分布式',
+              link: '/linux/hadoop/3fullyDistribution1'
+            },
+            {
+              text:'HDFS HA 高可用',
+              link: '/linux/hadoop/4hdfs-ha'
+            },
           ]
         }
       ]
