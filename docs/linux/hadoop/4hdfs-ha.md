@@ -15,26 +15,7 @@ mkdir -p /home/hadoop/hadoop-data/ha/dir-shared
 mkdir -p /home/hadoop/hadoop-data/zk
 ```
 
-## 搭建 zookeeper 集群
-
-根据集群的角色的分配，需要在 node02、node03、node04 上面配置 zookeeper
-
-:::tip 安装 zookeeper 的步骤
-
-先在 node02 上面配置好 zookeeper 然后再使用 scp 分发到 node03、 node04 上面
-
-:::
-
-* **先登录 node02 解压 zookeeper**
-
-```shell
-# 解压zookeeper
-tar -xvf zookeeper-3.4.14.tar.gz
-# 进入zookeeper主目录
-cd /home/hadoop/zookeeper-3.4.14
-```
-
-* **配置 zookeeper 的环境变量**
+## 配置环境变量
 
 在 node01 打开配置文件:
 
@@ -54,7 +35,7 @@ export ZOOKEEPER_HOME=/home/hadoop/zookeeper-3.4.14
 export CLASSPATH=.:$JAVA_HOME/lib/tools.jar:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib
 
 # 把jdk、hadoop、zk的bin目录加入到环境变量
-export PATH=$PATH:$JAVA_HOME/bin:$HADOOP_HOME/bin:$HADOOP_HOME/sbin:$ZOOKEEPER _HOME/bin
+export PATH=$PATH:$JAVA_HOME/bin:$HADOOP_HOME/bin:$HADOOP_HOME/sbin:$ZOOKEEPER_HOME/bin
 ```
 
 向 node02、node03、node04 进行环境变量文件的分发
@@ -76,6 +57,21 @@ source ~/.bash_profile
 
 ## 配置 zookeeper
 
+根据集群的角色的分配，需要在 node02、node03、node04 上面配置 zookeeper
+
+:::tip 配置 zookeeper 的步骤
+
+先在 node02 上面配置好 zookeeper 然后再使用 scp 分发到 node03、 node04 上面
+
+:::
+
+* ### 将 zookeeper 压缩包传到 node02 然后解压
+
+```shell
+# 解压zookeeper
+tar -xvf zookeeper-3.4.14.tar.gz
+```
+
 * ### 在 node02 进入 zookeeper 的配置文件目录
 
 ```shell
@@ -87,8 +83,6 @@ ll
 
 ![ha1](https://notewk-1304925042.cos.ap-guangzhou.myqcloud.com/notewk/ha1.jpg)
 
-<br>
-
 * ### **把 zoo_sample.cfg 改名为 zoo.cfg**
 
 > zoo.cfg 是 zookeeper 的配置文件
@@ -97,8 +91,6 @@ ll
 # 复制 zoo_sample.cfg 改名为 zoo.cfg
 cp zoo_sample.cfg zoo.cfg
 ```
-
-<br>
 
 * ### **编辑 zoo.cfg ，添加如下配置**
 
@@ -112,8 +104,6 @@ server.2=node03:2888:3888
 server.3=node04:2888:3888
 ```
 
-<br>
-
 * ### **在 node02 上向 node03、node04 分发已经配置好的 zookeeper**
 
 ```shell
@@ -122,8 +112,6 @@ scp -r /home/hadoop/zookeeper-3.4.14 node03:/home/hadoop/
 # 向node04分发
 scp -r /home/hadoop/zookeeper-3.4.14 node04:/home/hadoop/
 ```
-
-<br>
 
 * ### **在 zookeeper 的 dataDir 目录下创建一个 myid 文件**
 
@@ -186,7 +174,7 @@ cat myid
 :::
 
 ```shell
-vim /hadoop-3.1.4/etc/hadoop/hadoop-env.sh
+vim /home/hadoop/hadoop-3.1.4/etc/hadoop/hadoop-env.sh
 ```
 
 ```shell
@@ -202,7 +190,7 @@ export HADOOP_HOME=/home/hadoop/hadoop-3.1.4
 * ### 配置 core-site.xml
 
 ```shell
-vim /hadoop-3.1.4/etc/hadoop/core-site.xml
+vim /home/hadoop/hadoop-3.1.4/etc/hadoop/core-site.xml
 ```
 
 ```shell
@@ -230,7 +218,7 @@ vim /hadoop-3.1.4/etc/hadoop/core-site.xml
 * ### 配置 hdfs-site.xml
 
 ```shell
-vim /hadoop-3.1.4/etc/hadoop/hdfs-site.xml
+vim /home/hadoop/hadoop-3.1.4/etc/hadoop/hdfs-site.xml
 ```
 
 ```shell
@@ -289,7 +277,7 @@ vim /hadoop-3.1.4/etc/hadoop/hdfs-site.xml
         <!-- 此目录一定要创建 -->
         <value>/home/hadoop/hadoop-data/ha/dir-shared</value>
     </property>
-    
+
     <!-- nn对jn检测的重试次数，默认为10次，每次1000ms，故网络情况差需要增加，这里设置为30次 -->
     <property>
          <name>ipc.client.connect.max.retries</name>
@@ -492,17 +480,21 @@ hdfs zkfc -formatZK
 
 ![ha12](https://notewk-1304925042.cos.ap-guangzhou.myqcloud.com/notewk/ha12.jpg)
 
-**到 zookeeper 客户端里面查看初始化的 HA**
+* **到 node02 (zookeeper 客户端) 里面查看初始化的 HA**
 
 ```shell
 ls /
 ls /hadoop-ha
-ls /hadoop-ha/mycluster	
+ls /hadoop-ha/mycluster
 ```
 
 运行结果:
 
 ![ha13](https://notewk-1304925042.cos.ap-guangzhou.myqcloud.com/notewk/ha13.jpg)
+
+* **node02 退出 zk 客户端**
+
+> control + c
 
 :::tip 配置完成
 
@@ -589,21 +581,19 @@ get /hadoop-ha/mycluster/ActiveBreadCrumb
 * **通过下面命令查看端口信息**
 
 ```shell
+# 此处 192.168.60.101 为对应虚拟机 ip 地址
 ss -nal | grep 192.168.60.101
 ```
 
-运行效果:	
+运行效果:
 
 ![ha21](https://notewk-1304925042.cos.ap-guangzhou.myqcloud.com/notewk/ha21.jpg)
 
-```shell
-# node01为nn1
-http://node01:9870/dfshealth.html
-# node02为nn2
-http://node02:9870/dfshealth.html
-# HDFS
-http://node01:9870/explorer.html
-```
+**node01为nn1**：http://node01:9870/dfshealth.html
+
+**node02为nn2**：http://node02:9870/dfshealth.html
+
+**HDFS**：http://node01:9870/explorer.html
 
 **node01显示“active”**
 
@@ -617,19 +607,18 @@ http://node01:9870/explorer.html
 
 我们搭建HA高可用，就是为了解决单点故障，现在我们来测试一下，我们可以关闭node01的 namenode进程，然后再启动namenode进程，来模拟主节点故障，然后查看集群的情况，是否实现了活跃主节点的切换。
 
-**在node01上关闭namenode进程**
-
+**在 node01 上 关闭 namenode 进程，观察 [node02](http://node02:9870/dfshealth.html)**
 ```shell
 # 先关闭namenode
 hadoop-daemon.sh stop namenode
+```
+![ha24](https://notewk-1304925042.cos.ap-guangzhou.myqcloud.com/notewk/ha24.jpg)
+<br>
+**在 node01 上 启动 namenode 进程，观察 [node01](http://node01:9870/dfshealth.html)**
+```shell
 # 再启动namenode
 hadoop-daemon.sh start namenode
 ```
-
-运行效果:
-
-![ha24](https://notewk-1304925042.cos.ap-guangzhou.myqcloud.com/notewk/ha24.jpg)
-
 ![ha25](https://notewk-1304925042.cos.ap-guangzhou.myqcloud.com/notewk/ha25.jpg)
 
 ## 集群的启动与关闭
@@ -648,7 +637,7 @@ hadoop-daemon.sh start namenode
   start-dfs.sh
   ```
 
-运行结果:		
+运行结果:
 
 ![ha26](https://notewk-1304925042.cos.ap-guangzhou.myqcloud.com/notewk/ha26.jpg)
 
