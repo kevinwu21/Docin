@@ -4,28 +4,28 @@ layout: home
 hero:
   name: noteWk
   text: developed by Kevin
-  tagline: MacOS / Linux / 前端 开发手册
+  tagline: MacOS / Linux / Windows 开发手册
   image:
     src: /undraw_Outer_space_g.png
     alt:
   actions:
     - theme: brand
       text: 进入文档
-      link: /linux/install/centos
+      link: /linux/hadoop/1basic
     - theme: alt
       text: Gitee主页
       link: https://gitee.com/kevinwu_21
 
 features:
-  - icon: 💥
-    title: 前端 Frontend
-    details: JavaScript / TypeScript / Vue / React
-  - icon: 🐣
-    title: 后端 Backend
-    details: Java / Node.js
-  - icon: 🦁
-    title: 数据库 SQL
-    details: Mysql / Redis
+  - icon:  🎒
+    title: MacOS
+    details: 应用软件 / 终端命令 / 使用技巧
+  - icon: 🤯
+    title: Linux
+    details: 入门教程 / 开发环境
+  - icon: 🏎
+    title: Windows
+    details: 应用软件 / 使用技巧 / 偏好设置
 ---
 
 <style>

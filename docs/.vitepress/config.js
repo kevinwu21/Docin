@@ -27,7 +27,7 @@ export default ({
       { text: '首页',link: '/' },
       { text: 'MacOS',
         items: [
-          { text: '📚 软件应用', link: '/mac/application/vscode' },
+          { text: '📚 应用软件', link: '/mac/application/chrome' },
           { text: '📔 配置开发环境', link: '/mac/dev/jdk' },
           { text: '🛠 系统偏好设置', link: '/mac/preferences/general' },
         ]
@@ -49,6 +49,10 @@ export default ({
           // 默认是否折叠
           collapsed: false,
           items:[
+            {
+              text:'Chrome 谷歌浏览器',
+              link: '/mac/application/chrome',
+            },
             {
               text:'VSCode',
               link: '/mac/application/vscode',

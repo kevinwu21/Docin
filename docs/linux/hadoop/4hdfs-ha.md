@@ -673,7 +673,7 @@ hadoop-daemon.sh start namenode
 
 * 关闭集群、关闭虚拟机后 分别对四台虚拟机拍摄快照
 
-![ha28](https://notewk-1304925042.cos.ap-guangzhou.myqcloud.com/notewk/ha28.jpg)
+<img src="https://notewk-1304925042.cos.ap-guangzhou.myqcloud.com/notewk/ha28.jpg" alt="ha28" style="zoom:50%;" />
 
 :::tip 配置完成
 
