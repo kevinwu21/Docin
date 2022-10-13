@@ -1,6 +1,6 @@
 # Chrome 谷歌浏览器
 
-<img src="https://notewk-1304925042.cos.ap-guangzhou.myqcloud.com/notewk/google_chrome.jpg" alt="google_chrome"  />
+![google_chrome](https://notewk-1304925042.cos.ap-guangzhou.myqcloud.com/notewk/google_chrome.jpg)
 
 ## Chrome 网页翻译功能
 

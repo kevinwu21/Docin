@@ -4,7 +4,7 @@ layout: home
 hero:
   name: noteWk
   text: developed by Kevin
-  tagline: MacOS / Linux / Windows 开发手册
+  tagline: Windows / MacOS / Linux 指南手册
   image:
     src: /undraw_Outer_space_g.png
     alt:
@@ -18,14 +18,14 @@ hero:
 
 features:
   - icon:  🎒
-    title: MacOS
-    details: 应用软件 / 终端命令 / 使用技巧
-  - icon: 🤯
-    title: Linux
-    details: 入门教程 / 开发环境
-  - icon: 🏎
     title: Windows
     details: 应用软件 / 使用技巧 / 偏好设置
+  - icon: 🤯
+    title: MacOS
+    details: 应用软件 / 偏好设置 / 终端命令
+  - icon: 🏎
+    title: Linux
+    details: 入门教程 / 开发环境 / 终端命令
 ---
 
 <style>

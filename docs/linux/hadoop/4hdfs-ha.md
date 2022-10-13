@@ -335,7 +335,7 @@ vim /home/hadoop/hadoop-3.1.4/etc/hadoop/hdfs-site.xml
 :::
 
 ```shell
-vim + /home/hadoop/hadoop-3.1.4/etc/hadoop/workers
+vim /home/hadoop/hadoop-3.1.4/etc/hadoop/workers
 ```
 
 **设置如下信息**

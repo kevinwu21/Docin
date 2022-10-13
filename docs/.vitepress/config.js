@@ -25,22 +25,79 @@ export default ({
     logo: '/notewk_logo.png',
     nav: [
       { text: '首页',link: '/' },
+      { text: 'Windows',
+        items: [
+          { text: '🧬 应用软件', link: '/windows/application/1qq' },
+          { text: '🔔 使用技巧', link: '/windows/tip/1stopWinUpdate' },
+          { text: '🔍 开发环境', link: '/windows/dev/1java' }
+        ]
+      },
       { text: 'MacOS',
         items: [
           { text: '📚 应用软件', link: '/mac/application/chrome' },
-          { text: '📔 配置开发环境', link: '/mac/dev/jdk' },
+          { text: '📔 开发环境', link: '/mac/dev/1java' },
           { text: '🛠 系统偏好设置', link: '/mac/preferences/general' },
         ]
       },
       { text: 'Linux',
         items: [
           { text: '💿 安装指南', link: '/linux/install/centos' },
-          { text: '📕 配置开发环境', link: '/linux/dev/jdk' },
+          { text: '📕 开发环境', link: '/linux/dev/1java' },
           { text: '📊 Hadoop', link: '/linux/hadoop/1basic' },
         ]
       },
+      { text: '更多',
+        items: [
+          { text: '💥 Markdown 格式', link: '/more/1md-format' },
+        ]
+      }
     ],
     sidebar: {
+      '/windows/':[
+        {
+          text: 'Windows 应用软件',
+          // 是否显示折叠按钮
+          collapsible: true,
+          // 默认是否折叠
+          collapsed: false,
+          items:[
+            {
+              text: 'QQ',
+              link: '/windows/application/1qq',
+            },
+            {
+              text: '微信',
+              link: '/windows/application/2wechat',
+            },
+          ]
+        },
+        {
+          text: 'Windows 使用技巧',
+          // 是否显示折叠按钮
+          collapsible: true,
+          // 默认是否折叠
+          collapsed: false,
+          items:[
+            {
+              text:'禁用 Windows 系统更新',
+              link: '/windows/tip/1stopWinUpdate',
+            }
+          ]
+        },
+        {
+          text: 'Windows 开发环境',
+          // 是否显示折叠按钮
+          collapsible: true,
+          // 默认是否折叠
+          collapsed: false,
+          items:[
+            {
+              text:'Java',
+              link: '/windows/dev/1java',
+            }
+          ]
+        }
+      ],
       '/mac/':[
         {
           text: 'MacOS 应用软件',
@@ -68,15 +125,15 @@ export default ({
           ]
         },
         {
-          text: 'MacOS 配置开发环境',
+          text: 'MacOS 开发环境',
           // 是否显示折叠按钮
           collapsible: true,
           // 默认是否折叠
           collapsed: false,
           items:[
             {
-              text:'JDK',
-              link: '/mac/dev/jdk',
+              text:'Java',
+              link: '/mac/dev/1java',
             }
           ]
         },
@@ -120,8 +177,8 @@ export default ({
           collapsed: false,
           items:[
             {
-              text:'JDK',
-              link: '/linux/dev/jdk',
+              text:'Java',
+              link: '/linux/dev/1java',
             }
           ]
         },
@@ -147,6 +204,21 @@ export default ({
             {
               text:'HDFS HA 高可用',
               link: '/linux/hadoop/4hdfs-ha'
+            },
+          ]
+        }
+      ],
+      '/more/':[
+        {
+          text: '更多',
+          // 是否显示折叠按钮
+          collapsible: true,
+          // 默认是否折叠
+          collapsed: false,
+          items:[
+            {
+              text: 'Markdown 格式指南',
+              link: '/more/1md-format',
             },
           ]
         }
