@@ -4,11 +4,31 @@ Hadoop可以在单节点上以所谓的伪分布式模式运行，也就是一�
 
 > 参考文档：https://hadoop.apache.org/docs/r3.1.4/hadoop-project-dist/hadoop-common/SingleCluster.html#Pseudo-Distributed_Operation
 
+:::warning 注意
+
+本篇文章全部都在 node01 进行操作
+
+:::
+
 ## 1.确保ssh对自己可以免密
 ```shell
 ssh-copy-id hadoop@localhost
 ```
-## 2.下载hadoop-3.1.4.tar.gz，然后上传
+## 2.下载 hadoop-3.1.4.tar.gz
+
+123网盘：
+
+> [hadoop-3.1.4](https://www.123pan.com/s/zCYKVv-sJXR)（精简版)(推荐）
+
+阿里云镜像：
+
+> https://mirrors.aliyun.com/apache/hadoop/common/hadoop-3.3.4/hadoop-3.3.4.tar.gz
+
+:::warning 提示
+
+下载完成后，上传到虚拟机
+
+:::
 
 ## 3.解压hadoop安装文件
 

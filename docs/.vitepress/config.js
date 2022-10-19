@@ -205,6 +205,10 @@ export default ({
               text:'HDFS HA 高可用',
               link: '/linux/hadoop/4hdfs-ha'
             },
+            {
+              text:'HDFS Java开发',
+              link: '/linux/hadoop/5hdfs-java'
+            },
           ]
         }
       ],

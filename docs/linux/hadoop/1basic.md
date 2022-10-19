@@ -258,6 +258,8 @@ su hadoop
 
 ### 下载 JDK1.8
 
+123网盘：[jdk1.8-8u281](https://www.123pan.com/s/zCYKVv-2JXR)（推荐）
+
 官网地址：https://www.oracle.com/java/technologies/javase/javase-jdk8-downloads.html
 
 ![hadoop12](https://notewk-1304925042.cos.ap-guangzhou.myqcloud.com/notewk%2Fhadoop12.jpg)

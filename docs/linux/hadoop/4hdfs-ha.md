@@ -17,7 +17,7 @@ mkdir -p /home/hadoop/hadoop-data/zk
 
 ## 配置环境变量
 
-在 node01 打开配置文件:
+在 node02 打开配置文件:
 
 ```shell
 vim ~/.bash_profile
@@ -34,22 +34,20 @@ export ZOOKEEPER_HOME=/home/hadoop/zookeeper-3.4.14
 # 指定classpath
 export CLASSPATH=.:$JAVA_HOME/lib/tools.jar:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib
 
-# 把jdk、hadoop、zk的bin目录加入到环境变量
+# 把jdk、hadoop、zk的bin和hadoop的sbin目录加入到环境变量
 export PATH=$PATH:$JAVA_HOME/bin:$HADOOP_HOME/bin:$HADOOP_HOME/sbin:$ZOOKEEPER_HOME/bin
 ```
 
-向 node02、node03、node04 进行环境变量文件的分发
+向 node03、node04 进行环境变量文件的分发
 
 ```shell
-# 向node02进行分发
-scp ~/.bash_profile node02:/home/hadoop/
 # 向node03进行分发
 scp ~/.bash_profile node03:/home/hadoop/
 # 向node04进行分发
 scp ~/.bash_profile node04:/home/hadoop/
 ```
 
-分发完成后，记得在四台虚拟机中分别使用 source .bash_profile 使环境变量配置文件生效
+分发完成后，记得在三台虚拟机中分别使用 source .bash_profile 使环境变量配置文件生效
 
 ```shell
 source ~/.bash_profile
@@ -64,6 +62,16 @@ source ~/.bash_profile
 先在 node02 上面配置好 zookeeper 然后再使用 scp 分发到 node03、 node04 上面
 
 :::
+
+* ### 下载 zookeeper
+
+123网盘：
+
+> [zookeeper-3.4.14](https://www.123pan.com/s/zCYKVv-CJXR)（推荐）
+
+阿里云镜像：
+
+> https://mirrors.aliyun.com/apache/zookeeper/zookeeper-3.8.0/apache-zookeeper-3.8.0.tar.gz
 
 * ### 将 zookeeper 压缩包传到 node02 然后解压
 

@@ -3,13 +3,18 @@
 
 ![CentOS](https://notewk-1304925042.cos.ap-guangzhou.myqcloud.com/notewk/centoslogo.png)
 ## 下载 CentOS 镜像
->我们安装CentOS-7-x86_64-Minimal-1810.iso，也就是精简版，选择这个版本的原因在于精简版消耗系统资源最少，也相对来说更加稳定。下面是各个版本的阿里云镜像下载地址:
+
+>我们安装CentOS-7-x86_64-Minimal-1810.iso，也就是精简版，选择这个版本的原因在于精简版消耗系统资源最少，也相对来说更加稳定
+
+123网盘：[CentOS-7.9.2009-Minimal](https://www.123pan.com/s/zCYKVv-NJXR)
+
+阿里云镜像：
 
 版本|下载地址
 ---|---
-精简版Minimal | http://mirrors.aliyun.com/centos/7.9.2009/isos/x86_64/CentOS-7-x86_64-Minimal-2009.iso
-DVD版 | http://mirrors.aliyun.com/centos/7.9.2009/isos/x86_64/CentOS-7-x86_64-DVD-2009.iso
-完全版Everything | http://mirrors.aliyun.com/centos/7.9.2009/isos/x86_64/CentOS-7-x86_64-Everything-2009.iso
+精简版Minimal | https://mirrors.aliyun.com/centos/7.9.2009/isos/x86_64/CentOS-7-x86_64-Minimal-2009.iso 
+DVD版 | https://mirrors.aliyun.com/centos/7.9.2009/isos/x86_64/CentOS-7-x86_64-DVD-2009.iso 
+完全版Everything | https://mirrors.aliyun.com/centos/7.9.2009/isos/x86_64/CentOS-7-x86_64-Everything-2009.iso 
 
 ## 创建CentOS虚拟机
 >开始,点击下一步
