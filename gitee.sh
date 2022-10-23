@@ -8,6 +8,8 @@ cd docs/.vitepress/dist
 
 msg="gitee actions 自动部署"
 
+touch .gitignore
+echo "/linux/command/" >> .gitignore
 git init
 git add .
 git commit -m "${msg}"
