@@ -41,6 +41,7 @@ export default ({
       },
       { text: 'Linux',
         items: [
+          { text: '💡 命令手册', link: '/linux/command/catalogue' },
           { text: '💿 安装指南', link: '/linux/install/centos' },
           { text: '📕 开发环境', link: '/linux/dev/1java' },
           { text: '📊 Hadoop', link: '/linux/hadoop/1basic' },
@@ -152,6 +153,19 @@ export default ({
         }
       ],
       '/linux/':[
+        {
+          text: 'Linux 命令手册',
+          // 是否显示折叠按钮
+          collapsible: false,
+          // 默认是否折叠
+          collapsed: false,
+          items:[
+            {
+              text:'目录',
+              link: '/linux/command/catalogue',
+            }
+          ]
+        },
         {
           text: 'Linux 安装指南',
           // 是否显示折叠按钮
