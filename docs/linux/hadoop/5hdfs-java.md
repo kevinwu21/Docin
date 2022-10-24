@@ -15,8 +15,15 @@
 :::
 
 * ### 导入 winutils 工具包：
+
 :::warning 注意
 此步骤 macOS 不需要配置
+:::
+
+:::tip 下载地址
+
+123网盘：[winutils-hadoop-3.1.2](https://www.123pan.com/s/zCYKVv-ZIXR)
+
 :::
 
 #### **1.将 winutils 中 bin 目录下的 hadoop.dll、winutils.exe 拷贝到 hadoop-3.1.4 的bin目录下**
@@ -148,14 +155,14 @@
 
 ```java
 /**
- * 创建目录
- * @throws IOException
- */
+* 创建目录
+* @throws IOException
+*/
 @Test
 public void mkDir() throws IOException {
   // 创建配置类
   Configuration conf = new Configuration();
-  // 配置集群的连接位置
+  // 配置要连接的 hdfs 集群
   conf.set("fs.defaultFS","hdfs://node01:8020");
   // 创建目录
   String filePath = "/input/mkdir";
@@ -177,7 +184,13 @@ public void mkDir() throws IOException {
 
 * ### 2. 上传文件
 
-**在项目根目录下创建一个 word.txt 文件**
+**将示例文件 line200000.txt 放在 maven 项目主目录下**
+
+:::tip 下载地址
+
+123网盘：[line200000.txt](https://www.123pan.com/s/zCYKVv-cIXR)
+
+:::
 
 ```java
 /**
@@ -192,9 +205,9 @@ public void uploadFile() throws IOException {
   conf.set("fs.defaultFS","hdfs://node01:8020");
   // 操作文件系统，得到文件系统的实例
   FileSystem fileSystem = FileSystem.get(conf);
-  // 将 word.txt 从本地上传到 /input/word.txt
-  fileSystem.copyFromLocalFile(new Path("word.txt"),
-                               new Path("/input/word.txt"));
+  // line200000.txt 上传到 /input/line200000.txt
+  fileSystem.copyFromLocalFile(new Path("line200000.txt"),
+                               new Path("/input/line200000.txt"));
   //释放资源
   fileSystem.close();
 }
@@ -209,17 +222,17 @@ public void uploadFile() throws IOException {
  */
 @Test
 public void downloadFile() throws IOException {
-    // 创建配置类
-    Configuration conf = new Configuration();
-    // 配置要连接的 hdfs 集群
-    conf.set("fs.defaultFS","hdfs://node01:8020");
-    // 操作文件系统，得到文件系统的实例
-    FileSystem fileSystem = FileSystem.get(conf);
-    // 将 /input/word.txt 从 hdfs 下载到本地，注意此处本地根目录为项目根目录
-    fileSystem.copyToLocalFile(new Path("/input/word.txt"),
-                               new Path("./src/download.txt"));
-    // 释放资源
-    fileSystem.close();
+  // 创建配置类
+  Configuration conf = new Configuration();
+  // 配置要连接的 hdfs 集群
+  conf.set("fs.defaultFS","hdfs://node01:8020");
+  // 操作文件系统，得到文件系统的实例
+  FileSystem fileSystem = FileSystem.get(conf);
+  // 将 /input/line200000.txt 下载到 ./src/download.txt
+  fileSystem.copyToLocalFile(new Path("/input/line200000.txt"),
+                             new Path("./src/download.txt"));
+  // 释放资源
+  fileSystem.close();
 }
 ```
 
@@ -232,17 +245,159 @@ public void downloadFile() throws IOException {
  */
 @Test
 public void deleteFile() throws IOException {
-    // 创建配置类
-    Configuration conf = new Configuration();
-    // 配置要连接的 hdfs 集群
-    conf.set("fs.defaultFS","hdfs://node01:8020");
-    // 操作文件系统，得到文件系统的实例
-    FileSystem fileSystem = FileSystem.get(conf);
-    // 删除 /input/mkdir 目录
-    fileSystem.delete(new Path("/input/mkdir"),true);
-    // 删除 /input/word.txt 文件
-    fileSystem.delete(new Path("/input/word.txt"),true);
-    // 释放资源
-    fileSystem.close();
+  // 创建配置类
+  Configuration conf = new Configuration();
+  // 配置要连接的 hdfs 集群
+  conf.set("fs.defaultFS","hdfs://node01:8020");
+  // 操作文件系统，得到文件系统的实例
+  FileSystem fileSystem = FileSystem.get(conf);
+  // 删除 /input/mkdir 目录
+  fileSystem.delete(new Path("/input/mkdir"),true);
+  // 删除 /input/line200000.txt 文件
+  fileSystem.delete(new Path("/input/line200000.txt"),true);
+  // 删除 /input/write.txt 文件
+  fileSystem.delete(new Path("/input/write.txt"),true);
+  // 释放资源
+  fileSystem.close();
 }
 ```
+
+* ### 5.获取文件的元数据信息
+
+```java
+/**
+ * 获取文件的元数据信息
+ * @throws IOException
+ */
+@Test
+public void getFileMeta() throws IOException {
+  // 创建配置类
+  Configuration conf = new Configuration();
+  // 配置要连接的 hdfs 集群
+  conf.set("fs.defaultFS","hdfs://node01:8020");
+  // 操作文件系统，得到文件系统的实例
+  FileSystem fileSystem = FileSystem.get(conf);
+  // 要读取的文件
+  Path path = new Path("/input/line200000.txt");
+
+  // FileStatus类封装了文件系统中文件和目录的元数据信息
+  FileStatus status = fileSystem.getFileStatus(path);
+  // 分别获取元数据信息
+  System.out.println("块大小：" + status.getBlockSize());
+  System.out.println("文件大小：" + status.getLen());
+  System.out.println("副本数：" + status.getReplication());
+  System.out.println("所有者：" + status.getOwner());
+  System.out.println("修改时间：" + status.getModificationTime());
+
+  // 释放资源
+  fileSystem.close();
+}
+```
+
+* ### 6.获取文件的块信息
+
+```java
+/**
+ * 获取文件的块信息
+ * @throws IOException
+ */
+@Test
+public void getFileBlockLocations() throws IOException {
+  // 创建配置类
+  Configuration conf = new Configuration();
+  // 配置要连接的 hdfs 集群
+  conf.set("fs.defaultFS","hdfs://node01:8020");
+  // 操作文件系统，得到文件系统的实例
+  FileSystem fs = FileSystem.get(conf);
+  // 要读取的文件
+  Path path = new Path("/input/line200000.txt");
+
+  /* FileStatus类封装了文件系统中文件和目录的元数据,
+           包括文件长度、块大小、备份、修改时间、所有者以及权限信息 */
+  FileStatus status = fs.getFileStatus(path);
+  // 获得文件的块信息
+  BlockLocation[] blockLocations = fs.getFileBlockLocations(status, 0, status.getLen());
+  // 迭代块信息
+  for(BlockLocation bl:blockLocations){
+    // 偏移量
+    long offset = bl.getOffset();
+    // 长度
+    long len = bl.getLength();
+    // 数据节点名
+    String[] hosts = bl.getHosts();
+    System.out.println(offset + "," + len + "," + Arrays.asList(hosts));
+  }
+  // 释放资源
+  fs.close();
+}
+```
+
+* ### 7.文件的读取
+
+```java
+/**
+ * 文件的读取
+ * @throws IOException
+ */
+@Test
+public void readFile() throws IOException {
+  // 创建配置类
+  Configuration conf = new Configuration();
+  // 配置要连接的 hdfs 集群
+  conf.set("fs.defaultFS","hdfs://node01:8020");
+  // 操作文件系统，得到文件系统的实例
+  FileSystem fs = FileSystem.get(conf);
+  // 要读取的文件
+  Path path = new Path("/input/line200000.txt");
+
+  // 获取输入流
+  FSDataInputStream fdis = fs.open(path);
+  // 设置偏移量：0
+  fdis.seek(0);
+  byte[] buffer = new byte[512];
+  int len = 0;
+  while ((len = fdis.read(buffer)) > 0) {
+    System.out.println(new String(buffer, 0, len));
+  }
+  // 释放资源
+  fs.close();
+}
+```
+
+* ### 8.文件的写入
+
+```java
+/**
+ * 文件的写入
+ * @throws IOException
+ */
+@Test
+public void writeFile() throws IOException {
+  // 创建配置类
+  Configuration conf = new Configuration();
+  // 配置要连接的 hdfs 集群
+  conf.set("fs.defaultFS","hdfs://node01:8020");
+  // 操作文件系统，得到文件系统的实例
+  FileSystem fs = FileSystem.get(conf);
+
+  // 要写入的文件
+  File source = new File("word.txt");
+  // 写入到HDFS的路径
+  Path desc = new Path("/input/write.txt");
+
+  // 分别构建输入输出流
+  InputStream is = new FileInputStream(source);
+  FSDataOutputStream fdos = fs.create(desc);
+
+  // IO操作:边读边写
+  byte[] buffer = new byte[200];
+  int len=0;
+  while ((len = is.read(buffer)) != -1) {
+    fdos.write(buffer, 0, len);
+  }
+  // 文件系统用完以后需要关闭
+  fs.close();
+  is.close();
+}
+```
+

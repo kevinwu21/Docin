@@ -633,13 +633,13 @@ hadoop-daemon.sh start namenode
 
 * **集群启动：先启动 zookeeper，然后再启动 hdfs**
 
-  * 分别在node02、node03、node04启动zookeeper
+  * 分别在 node02、node03、node04 启动zookeeper
 
   ```shell
   zkServer.sh start
   ```
 
-  * 在node01启动HDFS
+  * 在 node01 启动HDFS
 
   ```shell
   start-dfs.sh
@@ -657,13 +657,13 @@ hadoop-daemon.sh start namenode
 
 * **集群关闭：先关hdfs，再关zookeeper**
 
-  * **在node01关闭HDFS**
+  * 在 node01 关闭HDFS
 
   ```shell
   stop-dfs.sh
   ```
 
-  * **在node02、node03、node04关闭zookeeper**
+  * 分别在 node02、node03、node04 关闭 zookeeper
 
   ```shell
   zkServer.sh stop
