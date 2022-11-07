@@ -34,6 +34,7 @@ export default ({
       },
       { text: 'MacOS',
         items: [
+          { text: '  Awesome Mac', link: 'https://kevinwu_21.gitee.io/awesome-mac' },
           { text: '📚 应用软件', link: '/mac/application/chrome' },
           { text: '📔 开发环境', link: '/mac/dev/1java' },
           { text: '🛠 系统偏好设置', link: '/mac/preferences/general' },
