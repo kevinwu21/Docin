@@ -1,0 +1,14 @@
+#!/usr/bin/env sh
+
+set -e
+
+npm run build
+
+cd docs/.vitepress/dist
+
+# 将目录传到腾讯云服务器
+scp -r /Users/KevinWu/Desktop/Project/noteWk/docs/.vitepress/dist/* root@tencent_kevin:/www/wwwroot/notewk
+
+cd -
+rm -rf docs/node_modules
+rm -rf docs/.vitepress/dist

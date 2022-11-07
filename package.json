@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "tencent": "bash tencent.sh",
     "gitee": "bash gitee.sh",
     "github": "bash github.sh",
     "dev": "vitepress dev docs",
