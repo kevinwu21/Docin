@@ -5,9 +5,11 @@ git add .
 git commit -m'NEW:新增xxx功能'
 ```
 ### 提交备注规范：
-> NEW：新增了xxx功能
-> MOD：优化了xxx功能/逻辑
-> BUG：修复了xxx的bug
+> NEW：新增了 xxx 功能
+>
+> MOD：优化了 xxx 功能 / 逻辑
+>
+> BUG：修复了 xxx 的 BUG
 
 ## 推送到远程仓库（gitee）- push
 ```shell
