@@ -51,6 +51,7 @@ export default ({
       { text: '更多',
         items: [
           { text: '💥 Markdown 格式', link: '/more/1md-format' },
+          { text: '🧰 Git团队开发手册', link: '/more/Git团队开发手册' },
         ]
       }
     ],
@@ -238,6 +239,10 @@ export default ({
             {
               text: 'Markdown 格式指南',
               link: '/more/1md-format',
+            },
+            {
+              text: 'Git团队开发手册',
+              link: '/more/Git团队开发手册',
             },
           ]
         }
