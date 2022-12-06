@@ -10,7 +10,7 @@ export default ({
   ignoreDeadLinks: true,
   // 头 <head>要在页面HTML的标记中呈现的其他元素
   head: [
-    ['link', { rel: 'icon', href: 'https://notewk-1304925042.cos.ap-guangzhou.myqcloud.com/notewk/notewk_logo_circle.svg' }]
+    ['link', { rel: 'icon', href: 'https://notewk-1304925042.cos.ap-guangzhou.myqcloud.com/notewk/noteWk_logo.svg' }]
   ],
   // 开启最近更新时间 使用git commit获取时间戳 此选项启用默认主题以显示页面的最后更新时间。
   lastUpdated: true,
