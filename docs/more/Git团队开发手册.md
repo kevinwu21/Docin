@@ -18,6 +18,12 @@ git push origin czq
 ```
 ## 拉取远程仓库代码 - pull
 ```shell
+# 普通拉取
 # git pull origin [branch]
 git pull origin czq
+
+# 强制覆盖拉取
+# git fetch --all && git reset --hard origin/[branch] && git pull
+git fetch --all && git reset --hard origin/czq && git pull
 ```
+

@@ -6,7 +6,7 @@
   }
   /* 颜色A */
   .a_button{
-    background-color: #65B687;
+    background-color: #49B576;
     color: #fff;
     font-weight: bold;
     border-radius:30px;
