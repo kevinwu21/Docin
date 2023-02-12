@@ -16,7 +16,7 @@ export default ({
   lastUpdated: true,
   // 配置markdown格式
   markdown: {
-    theme: 'material-palenight',
+    theme: 'material-theme-darker',
     lineNumbers: true
   },
 
