@@ -2,7 +2,7 @@
 layout: home
 
 hero:
-  name: noteWk
+  name: KeeDoc
   text: developed by Kevin
   tagline: Windows / MacOS / Linux 指南手册
   image:

@@ -1,7 +1,7 @@
 export default ({
-  base:'/',
-  title: 'noteWk',
-  titleTemplate: 'noteWk',
+  base:'/KeeDoc',
+  title: 'KeeDoc',
+  titleTemplate: 'KeeDoc',
   lang: 'zh-CN',
   description: 'A VitePress site',
   // 暗色模式切换按钮
