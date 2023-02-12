@@ -260,8 +260,14 @@ export default ({
       { icon: 'github', link: 'https://github.com/kevinwu21' }
     ],
     footer: {
-      message: '<a href="https://beian.miit.gov.cn/">湘ICP备2022023238号-1</a>',
       copyright: 'Copyright © 2022-present <a href="https://gitee.com/kevinwu_21">Kevin Wu</a>'
+    },
+    algolia: {
+      appId: 'VA0O07PBGT',
+      apiKey: '66868784ad00832235e1286c7ffa8751',
+      indexName: 'KeeDoc',
+      placeholder: '请输入关键词',
+      buttonText: '搜索'
     }
   }
 })
