@@ -1,6 +1,6 @@
 {
   "index_name": "kee",
-  "start_urls": ["https://kevinwu21.github.io/KeeDoc"],
+  "start_urls": ["http://notewk.top/"],
   "rateLimit": 8,
   "maxDepth": 10,
   "selectors": {
