@@ -264,7 +264,7 @@ export default ({
     },
     algolia: {
       appId: 'USWUR2KHVL',
-      apiKey: '549f677e28705a1c21c017dd78f8bd29',
+      apiKey: 'c8d22bee216bd0cc8f45b8e483e8cdc0',
       indexName: 'kee',
       placeholder: '请输入关键词',
       buttonText: '搜索'
