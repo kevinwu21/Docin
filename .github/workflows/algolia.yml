@@ -14,9 +14,9 @@ jobs:
       - name: Push indices to Algolia
         uses: signcl/docsearch-scraper-action@master
         env:
-          APPLICATION_ID: VA0O07PBGT
-          API_KEY: ba8a5f1973b9cfc9e527bf626fdb58c5
-          CONFIG: ${{ steps.algolia_config.outputs.config }}
-          # APPLICATION_ID: ${{ secrets.APPLICATION_ID }}
-          # API_KEY: ${{ secrets.API_KEY }}
+          # APPLICATION_ID: VA0O07PBGT
+          # API_KEY: ba8a5f1973b9cfc9e527bf626fdb58c5
           # CONFIG: ${{ steps.algolia_config.outputs.config }}
+          APPLICATION_ID: ${{ secrets.APPLICATION_ID }}
+          API_KEY: ${{ secrets.API_KEY }}
+          CONFIG: ${{ steps.algolia_config.outputs.config }}
