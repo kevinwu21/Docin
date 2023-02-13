@@ -10,7 +10,7 @@ rm -rf linux/command
 rm -rf assets/linux_command_pages*
 
 # 将目录传到腾讯云服务器
-scp -r /Users/KevinWu/Desktop/Project/noteWk/docs/.vitepress/dist/* root@tencent_kevin:/www/wwwroot/notewk
+scp -r /Users/KevinWu/Desktop/Project/KeeDoc/docs/.vitepress/dist/* root@tencent_kevin:/www/wwwroot/notewk
 
 cd -
 rm -rf docs/node_modules
