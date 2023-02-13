@@ -263,8 +263,8 @@ export default ({
       copyright: 'Copyright © 2022-present <a href="https://gitee.com/kevinwu_21">Kevin Wu</a>'
     },
     algolia: {
-      appId: '0H5Y471MQ4',
-      apiKey: '5a33c8d31acfceaf5700dce3b0cce46e',
+      appId: 'USWUR2KHVL',
+      apiKey: 'c8d22bee216bd0cc8f45b8e483e8cdc0',
       indexName: 'KeeDoc',
       placeholder: '请输入关键词',
       buttonText: '搜索'
