@@ -1,6 +1,6 @@
 export default ({
-  // base:'/',
-  base:'/KeeDoc',
+  base:'/',
+  // base:'/KeeDoc',
   title: 'KeeDoc',
   titleTemplate: 'KeeDoc',
   lang: 'zh-CN',
