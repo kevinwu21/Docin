@@ -266,7 +266,7 @@ export default ({
     algolia: {
       appId: 'VA0O07PBGT',
       apiKey: '66868784ad00832235e1286c7ffa8751',
-      indexName: 'kee',
+      indexName: 'notewk',
       placeholder: '请输入关键词',
       buttonText: '搜索'
     }
