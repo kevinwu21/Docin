@@ -1,6 +1,6 @@
 export default ({
-  base:'/',
-  // base:'/KeeDoc',
+  // base:'/',
+  base:'/KeeDoc',
   title: 'KeeDoc',
   titleTemplate: 'KeeDoc',
   lang: 'zh-CN',
@@ -264,8 +264,8 @@ export default ({
       copyright: 'Copyright © 2022-present <a href="https://gitee.com/kevinwu_21">Kevin Wu</a>'
     },
     algolia: {
-      appId: 'USWUR2KHVL',
-      apiKey: 'c8d22bee216bd0cc8f45b8e483e8cdc0',
+      appId: 'VA0O07PBGT',
+      apiKey: '66868784ad00832235e1286c7ffa8751',
       indexName: 'kee',
       placeholder: '请输入关键词',
       buttonText: '搜索'
